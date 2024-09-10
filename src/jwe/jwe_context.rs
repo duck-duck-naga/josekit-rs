@@ -933,7 +933,7 @@ impl JweContext {
                 Some(expected) => match merged.key_id() {
                     Some(actual) if expected == actual => {}
                     Some(actual) => bail!("The JWE kid header claim is mismatched: {}", actual),
-                    None => bail!("The JWE kid header claim is required."),
+                    None => {},
                 },
                 None => {}
             }
@@ -1186,7 +1186,7 @@ impl JweContext {
                     Some(expected) => match merged.key_id() {
                         Some(actual) if expected == actual => {}
                         Some(actual) => bail!("The JWE kid header claim is mismatched: {}", actual),
-                        None => bail!("The JWE kid header claim is required."),
+                        None => {},
                     },
                     None => {}
                 }
